@@ -1,0 +1,24 @@
+<!--
+  Generated template for the ConceptsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{selectedItem.title}} - Concepts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <div *ngFor="let course of courses">
+      <div *ngIf="selectedItem.title == course.category">
+        <button ion-item (click)="itemTapped($event, course)">
+          <ion-icon name="book" item-left></ion-icon>
+          {{course.name}}
+        </button>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

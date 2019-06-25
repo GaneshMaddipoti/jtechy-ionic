@@ -1,0 +1,27 @@
+<!--
+  Generated template for the ModifycoursePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ course.name }} - Edit</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="course.category" name="category" placeholder="category"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="course.name" name="name" placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [(ngModel)]="course.description" name="description" placeholder="Description" rows="10">
+      </ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block>Modify Course</button>
+  </form>
+</ion-content>

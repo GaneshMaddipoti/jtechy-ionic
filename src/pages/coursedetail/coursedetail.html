@@ -1,0 +1,18 @@
+<!--
+  Generated template for the CoursedetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title><span *ngIf="course">{{ course.category }} - {{ course.name }}</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="course">
+    <div [innerHTML]="course.description" style="white-space: pre-wrap;"></div>
+    <button ion-button (click)="modifyCourse($event, course)">Modify</button>
+  </div>
+</ion-content>
